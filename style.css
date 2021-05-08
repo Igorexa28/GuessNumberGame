@@ -31,7 +31,7 @@ button:hover {
 }
 #main .main-content {
   width: 700px;
-  height: 650px;
+  height: auto;
   font-size: 20px;
   margin: 0px 10px;
   padding: 10px 10px;
@@ -84,5 +84,6 @@ button:hover {
   margin-top: 15px;
 }
 #main .main-content #countRight {
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-left: 10px;
 }/*# sourceMappingURL=style.css.map */
