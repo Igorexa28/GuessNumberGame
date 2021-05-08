@@ -5,9 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <title>Guess number game</title>
 </head>
 <body>
-    <script></script>
+    <div id="main">
+        <div class="main-content">
+            <h1>Guess my number!</h1>
+            <p class="head-text">This is a Fun Number Guessing JavaScript Game</p>
+            <hr />
+            <p class="text">Try to guess my <strong>random secret number</strong>. Do not be afraid, I will tell you how close you.</p>
+            <center>
+                <input type="number" name="upperLimit" id="upperLimit" placeholder="Enter the upper limit of the range">
+            </center>
+            <p class="text" style="margin-top: 20px;">My number between <span class="rangeNum" id="begin"></span> and <span class="rangeNum" id="end">...</span> inclusively.</p>
+            <center>
+                <input type="number" name="userNumber" id="userNumber" placeholder="Enter your number to try">
+            </center>
+            <p class="text" style="margin-right: 250px; margin-top: 20px;">Prompt: <span id="prompt"></span></p>
+            <center>
+                <button type="submit" id="tryNumber" class="btn btn-primary">Try my number!</button><br />
+                <button type="submit" id="resetProgress" class="btn btn-primary">Reset all progress</button>
+            </center>
+            <div id="countRight">Count of attempts: <span id="count"></span></div>
+        </div>
+    </div>
+    <script defer src="script.js"></script>
 </body>
 </html>
