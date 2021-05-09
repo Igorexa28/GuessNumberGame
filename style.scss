@@ -61,6 +61,19 @@ button {
             }
         }
 
+        #difficulty {
+            margin-bottom: 10px;
+            height: 34px;
+            width: 300px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: 1px solid black;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
         input {
             margin-top: 20px;
             height: 34px;
@@ -75,6 +88,10 @@ button {
                 outline: none;
                 transform: scale(1.05);
             }
+        }
+
+        #userNumber {
+            margin-top: -10px;
         }
 
         #resetProgress {

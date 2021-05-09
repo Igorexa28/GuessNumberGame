@@ -64,6 +64,17 @@ button:hover {
   font-size: 20px;
   text-decoration: underline;
 }
+#main .main-content #difficulty {
+  margin-bottom: 10px;
+  height: 34px;
+  width: 300px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+#main .main-content #difficulty:focus {
+  outline: none;
+}
 #main .main-content input {
   margin-top: 20px;
   height: 34px;
@@ -79,6 +90,9 @@ button:hover {
   outline: none;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+#main .main-content #userNumber {
+  margin-top: -10px;
 }
 #main .main-content #resetProgress {
   margin-top: 15px;
