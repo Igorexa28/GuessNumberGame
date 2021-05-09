@@ -30,7 +30,11 @@ inputNumber.onblur = function(event) {
 
     randomNumber = getRandomInteger(0, endOfRange);
     countPlace.textContent = 0;
+    console.log(randomNumber);
 };
+
+
+console.log(randomNumber);
 
 tryNumber.onclick = function(event) {
     let userNumber = document.querySelector('#userNumber').value;
@@ -40,12 +44,44 @@ tryNumber.onclick = function(event) {
         ++count;
     }
 
+    // * First version of program
+
+    if (difference >= 70) {
+        promptPlace.textContent = prompts[0];
+    } else if (difference >= 35) {
+        promptPlace.textContent = prompts[1];
+    } else if (difference >= 15) {
+        promptPlace.textContent = prompts[2];
+    } else if (difference >= 5) {
+        promptPlace.textContent = prompts[3];
+    } else if (difference === 0) {
+        promptPlace.textContent = prompts[4];
+        alert(`Congratulations! You managed to guess my number) It took you ${count}.`);
+        count = 0;
+    }
+
     countPlace.textContent = count;
 
-    sayPrompt(difference,promptPlace, prompts);
+    // * Second version of program
+
+    /*
+
+    let moreOrLow = randomNumber > userNumber ? 'Higher' : 'Lower';
+
+    promptPlace.textContent = moreOrLow;
+
+    if ( randomNumber ===  +userNumber) {
+        promptPlace.textContent = prompts[4];
+        alert(`Congratulations! You managed to guess my number) It took you ${count}.`);
+        count = 0;
+    }    
+
+    */
 
     document.querySelector('#userNumber').value = '';
 };
+
+console.log(randomNumber);
 
 resetBtn.onclick = function(event) {
     location.reload();
@@ -55,17 +91,3 @@ function getRandomInteger(minimum = 0, maximum = 10) {
     return Math.floor(Math.random() * (maximum - minimum + 1) + minimum);
 }
 
-function sayPrompt(difference, whereToInsert, array) {
-    if (difference >= 70) {
-        whereToInsert.textContent = array[0];
-    } else if (difference >= 35) {
-        whereToInsert.textContent = array[1];
-    } else if (difference >= 15) {
-        whereToInsert.textContent = array[2];
-    } else if (difference >= 5) {
-        whereToInsert.textContent = array[3];
-    } else if (difference === 0) {
-        whereToInsert.textContent = array[4];
-        alert('Congratulations! You managed to guess my number)');
-    }
-}
