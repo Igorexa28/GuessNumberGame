@@ -29,6 +29,7 @@ inputNumber.onblur = function() {
 
     rangeEnd.textContent = endOfRange;
     inputNumber.value = '';
+    promptPlace.textContent = '';
 
     randomNumber = getRandomInteger(0, endOfRange);
     countPlace.textContent = 0;
@@ -38,6 +39,7 @@ let difficultyLevel = 'easy';
 
 choiceDifficulty.addEventListener('change', function() {
     difficultyLevel = this.value;
+    promptPlace.textContent = '';
     countPlace.textContent = 0;
 });
 
@@ -76,6 +78,7 @@ tryNumber.onclick = function() {
             alert(`Congratulations! You managed to guess my number) It took you ${count}.`);
             count = 0;
             endOfRange.textContent = '...';
+
         }
     }
     countPlace.textContent = count;
